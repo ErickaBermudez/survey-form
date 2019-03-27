@@ -1,15 +1,83 @@
  <!DOCTYPE html>
  <html lang="en">
 
-<head>
-     <meta charset="UTF-8">
-     <title>Survey Form</title>
-     <meta name="survey" content="Survey form">
-    <link rel="stylesheet" href="PATH">
+ <head>
+   <meta charset="UTF-8">
+   <title>Survey Form</title>
+   <meta name="survey" content="Survey form">
+   <link rel="stylesheet" href="main.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+   <script src="main.js"></script>
+
  </head>
 
  <body>
-   hello! this is my survey form!
+   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+   <header>
+     <center>
+       <h1 id="title">Reading Habits Survey</h1>
+       <p id="description">A small survey to learn about reading habits</description>
+     </center>
+   </header>
+
+   <div class="container">
+     <form id="survey-form">
+       <div class="row">
+         <label id="name-label" for="name" class="labels"> Name (required) </label>
+         <input id="name" placeholder="Your name" autofocus type="text" name="name" class="input-field" required>
+       </div>
+       <div class="row">
+         <label id="email-label" for="email" class="labels">Email (required) </label>
+         <input id="email" placeholder="Don't forget the @!" type="email" name="email" class="input-field" required>
+       </div>
+       <div class="row">
+         <label id="number-label" for="number" class="labels"> Age (required) </label>
+         <input id="number" placeholder="Age" type="number" name="number" class="input-field" min="12" max="90">
+       </div>
+       <label id="dropdown-label" name="dropdown-label" for="dropdown">Which option describes you best?</label>
+       <div class="row">
+         <select id="dropdown" name="activity" class="dropwdown">
+           <option disabled value>Select an option</option>
+           <option value="student">Student</option>
+           <option value="job">Full time job</option>
+           <option value="part-time">Part time job</option>
+           <option value="none">None of the above</option>
+         </select>
+         <div class="other-option">
+           <label>Please describe: </label>
+           <input type="text" class="input-field">
+         </div>
+       </div>
+       <div class="row">
+         <label name="booksPerMonth-label" for="booksPerMonth" class="labels">How many books do you read per month?</label>
+         <ul style="list-style: none">
+           <li class="radio"><label>More than 5</label><input name="radio-buttons" value="1" type="radio" class="booksPerMonth"></label></li>
+           <li class="radio"><label>Around 5</label><input name="radio-buttons" value="2" type="radio" class="booksPerMonth"></label></li>
+           <li class="radio"><label>Less than 5</label><input name="radio-buttons" value="3" type="radio" class="booksPerMonth"></label></li>
+         </ul>
+       </div>
+       <div class="row">
+         <label name="favoriteTypes-label" for="favoriteTypes" class="labels">Why do you usually read books?</label>
+         <ul id="favoriteTypes">
+           <li class="checkbox"><label><input name="favs" value="1" type="checkbox" class="favoriteTypes">I love books!</label></li>
+           <li class="checkbox"><label><input name="favs" value="2" type="checkbox" class="favoriteTypes">For school/my job</label></li>
+           <li class="checkbox"><label><input name="favs" value="3" type="checkbox" class="favoriteTypes">I want to learn new things</label></li>
+           <li class="checkbox"><label><input name="favs" value="4" id="cb-other" type="checkbox" class="favoriteTypes">Other</label></li>
+         </ul>
+         <div class="describe-fav">
+           <label>Please describe: </label>
+           <input type="text" class="input-field">
+         </div>
+       </div>
+       <div class="row">
+         <label for="books" class="labels">What are your favorite books?</label>
+         <textarea id="books" class="input-field" name="books" placeholder="Enter your favorite books here!"></textarea>
+       </div>
+       <button id="submit" type="submit">Submit</button>
+     </form>
+     </container>
  </body>
+
 
  </html>
