@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $("#dropdown").change(function() {
     var selectedValue = $(this).val()
-    var label = $(this).next('.other-option')
+    var label = $('.other-option')
     if (selectedValue == "none") {
       label.show()
     } else {
